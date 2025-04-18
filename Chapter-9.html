@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body onload="eventHandling()" onresize="eventHandling()">
+  <h1>HTML Events</h1>
+  <hr>
+  <h2>Form Events</h2>
+  <label for="fName">First Name</label>
+  <input
+    id="fName"
+    type="text"
+    onfocus="eventHandling1(this)"
+    onblur="eventHandling2()"
+  /><br /><br>
+  <label for="">Select Car:</label>
+  <select name="" id="mySelect" onchange="eventHandling3()">
+    <option value="Audi">Audi</option>
+    <option value="BMW">BMW</option>
+    <option value="Volvo">Volvo</option>
+    <option value="Mercedes">Mercedes</option>
+  </select>
+  <br /><br>
+  <label for="mobileNo">Mobile No:</label>
+  <input id="mobileNo" type="text" oninput="eventHandling4() " />
+  <h3>Output: </h3>
+  <p id="output"></p>
+  <br>
+
+  <h2>Keyboard Events</h2>
+
+  <h3> a) onkeydown </h3>
+  <p>A function is triggered when the user presses a key in the input field.</p>
+  <label for="fname">Enter Your Name: </label>
+  <input id="fname" type="text" onkeydown="eventHandler5()" />
+<br>
+
+<h3> b) onkeyup </h3>
+  <p>A function is triggered when the user releases a key in the input field.</p>
+  <label for="fname">Enter Your Name: </label>
+  <input id="fname" type="text" onkeyup="eventHandler6()" />
+<br>
+
+<h3> c) onkeypress </h3>
+  <p>A function is triggered when the user presses a key in the input field.</p>
+  <label for="fname">Enter Your Name: </label>
+  <input id="fname" type="text" onkeypress="eventHandler7()" />
+<br><br><br>
+
+<h2>Mouse Events</h2>
+
+<h3> a) onclick</h3>
+<button onclick="eventHandler8()">Click me</button>
+<br>
+
+<h3> b) ondblclick </h3>
+<button ondblclick="eventHandler9()">Click me</button>
+<br>
+
+<h3> c) onmousemove</h3>
+<p onmousemove="enlarge(this)">The function enlarge() is triggered when the user mouse pointer is moved over the paragraph.
+  <br>This function will enlarge the font size.</p>
+
+
+<h3> d) onmousedown and onmouseup </h3>
+<p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">
+Click this text!<br />
+The mouseDown() function is triggered when the mouse button is pressed over this paragraph. The function sets the color of the text to red. <br />
+The mouseUp() function is triggered when the mouse button is released while over the paragraph. The function sets the color of the text to blue.
+</p>
+
+<h3> e) onmouseover and onmouseout </h2>
+<p onmouseover="increaseFontSize(this)" onmouseout="decreaseFontSize(this)">
+When the user mouse over the paragraph, its font size will be 32px.
+<br />
+When the mouse pointer is moved out of it, the font size will be
+20px.
+</p>
+
+  <script>
+    function eventHandling() {
+      var confirmed = confirm(
+        "Are you sure that you want to view the message"
+      );
+      if (confirmed) {
+        alert("This is a New Message");
+      } else {
+        alert("Cancel");
+      }
+    }
+  </script>
+
+  <script>
+    function eventHandling1(input) {
+        input.style.background = "yellow";
+      }
+    function eventHandling2() {
+        var x = document.getElementById("fName");
+        alert("Hi " + x.value);
+      }
+    function eventHandling3() {
+        var car = document.getElementById("mySelect").value;
+        alert("You have selected: " + car);
+      }
+    function eventHandling4() {
+        var mobileNo = document.getElementById("mobileNo").value;
+        document.getElementById("output").innerHTML = mobileNo;
+      }
+  </script>
+
+<script>
+  function eventHandler5() {
+  alert("You pressed a key inside the input field");
+  }
+  function eventHandler6() {
+  alert("You pressed a key inside the input field");
+  }
+  function eventHandler7() {
+  alert("You pressed a key inside the input field");
+  }
+</script>
+
+<script>
+  function eventHandler8() {
+  alert("You clicked the button");
+  }
+  function eventHandler9() {
+  alert("You double-clicked the button");
+  }
+  function enlarge(x) {
+  oldFontSize = x.style["font-size"];
+  if (!oldFontSize) {
+  oldFontSize = 16;
+  } else {
+  oldFontSize = parseFloat(oldFontSize.replace("px", ""));
+  }
+  x.style["font-size"] = oldFontSize + 0.1 + "px";
+  }
+  function mouseDown() {
+  document.getElementById("p1").style.color = "red";
+  }
+  function mouseUp() {
+  document.getElementById("p1").style.color = "blue";
+  }
+  function increaseFontSize(x) {
+  x.style["font-size"] = "32px";
+  }
+  function decreaseFontSize(x) {
+  x.style["font-size"] = "20px";
+  }
+</script>
+</body>
+</html>

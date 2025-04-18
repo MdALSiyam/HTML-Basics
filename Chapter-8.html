@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>HTML Advanced</h1>
+  <hr>
+
+  <h2>Data URIs</h2>
+
+  <textarea name="input" cols="30">Change this text and click the download link</textarea>
+  <br>
+  <a href="javascript:void(0)" download="data.txt">Download Text</a>
+
+  <script type="text/javascript">
+    var input = document.querySelector("textarea[name='input']");
+    var download = document.querySelector("a[download]");
+    input.addEventListener("input", updateDownloadHref, false);
+    function updateDownloadHref() {
+      var text = input.value;
+      if (text) {
+        var encodedText = encodeURIComponent(text);
+        download.setAttribute("href", "data:text/plain;charset=utf-8," + encodedText);
+      } else {
+        download.removeAttribute("href");
+      }
+    }
+  </script>
+</body>
+</html>

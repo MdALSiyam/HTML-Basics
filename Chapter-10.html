@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div2 {
+    border: 1px solid black;
+    width: 200px;
+    height: 60px;
+    }
+    </style>
+</head>
+<body>
+  <h1>HTML APIs</h1>
+  <hr>
+
+  <h2>Drag and Drop</h2>
+  <div id="div1" draggable="true"
+ondragstart="dragStartHandler(event)">This div is draggable. You can
+drag and drop it into the rectangle.</div>
+<div id="div2" ondrop="dropHandler(event)"
+ondragover="allowDropping(event)"></div>
+<br>
+<h2>Geolocation</h2>
+<p>Click the button to get your coordinates.</p>
+<button onclick="getLocation()">Get location</button>
+<p id="out"></p>
+<script>
+function allowDropping(ev) {
+  ev.preventDefault();
+}
+function dropHandler(ev) {
+var data = ev.dataTransfer.getData("sourceID");
+ev.target.appendChild(document.getElementById(data));
+}
+function dragStartHandler(ev) {
+console.log(ev);
+ev.dataTransfer.setData("sourceID", ev.target.id);
+}
+</script>
+
+<script>
+  var x = document.getElementById("out");
+  function getLocation() {
+  if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+  x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+  }
+  function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Form</h1>
+    <hr><br>
+    <form action="Chapter5.html" enctype="multipart/form-data">
+      <fieldset>
+        <p>
+          <img id="output" src="" alt="" width="100px" />
+        </p>
+        <p>
+          <input
+            id="file"
+            name="fileName"
+            accept="image/*"
+            onchange="loadImage(event)"
+            type="file"
+          />
+        </p>
+        <legend>Car Registration</legend>
+
+        <label for="fName"> First Name: </label>
+        <input
+          id="fName"
+          name="firstName"
+          value="Siyam"
+          type="text"
+          readonly
+        /><br />
+
+        <label for="lName"> Last Name: </label>
+        <input id="lName" name="lastName" type="text" autocomplete /><br />
+
+        <label for="car"> Select Car: </label>
+        <select name="car" id="car" multiple>
+          <option value="volvo">Volvo</option>
+          <option value="noah">Noah</option>
+          <option value="audi">Audi</option>
+          <option value="mercedes">Mercedes</option>
+        </select>
+        <br />
+        <label for="car"> Select Car: </label>
+        <select name="car" id="car">
+          <optgroup label="Swedish Car">
+            <option value="volvo">Volvo</option>
+            <option value="noah">Noah</option>
+          </optgroup>
+
+          <optgroup label="German Car">
+            <option value="audi">Audi</option>
+            <option value="mercedes">Mercedes</option>
+          </optgroup>
+        </select>
+        <br />
+        <datalist id="car-list">
+          <option value="Volvo">Volvo</option>
+          <option value="Noah">Noah</option>
+          <option value="Audi">Audi</option>
+          <option value="Mercedes">Mercedes</option>
+        </datalist>
+        <input type="text" name="myCar" list="car-list" />
+        <button onclick="alert('Your Registration have submitted')" disabled>
+          Sumbit
+        </button>
+        <br />
+        <input
+          type="button"
+          value="Click Here"
+          onclick="alert('Input Type Button')"
+        />
+        <br />
+        <input type="submit" value="Sumbit Here" />
+        <br />
+        <input type="reset" value="Reset Form" />
+        <br />
+        <input
+          type="image"
+          src="Images/myHtml.png"
+          alt="Image Button"
+          height="100px"
+          width="100px"
+        />
+        <br />
+        <label for="password"> Password: </label>
+        <input
+          onkeyup="check()"
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter Password"
+        />
+        <br />
+        <label for="confirm-password"> Confirm Password: </label>
+        <input
+          onkeyup="check()"
+          id="confirm-password"
+          type="password"
+          name="confirm-password"
+          placeholder="Confirm Password"
+        />
+        <span id="passmessage"></span>
+        <br />
+        <label for="email">Email: </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="example@gmail.com"
+          autofocus
+        />
+        <br />
+        <label for="url"> URL: </label>
+        <input type="url" name="mySite" placeholder="Enter URL" />
+        <br />
+        <input type="hidden" value="1234" name="password" />
+        <input type="text" value="1234" name="password" />
+        <br />
+        <label for="salary"> Salary: </label>
+        <input id="salary" type="number" value="1234" name="salary" step="2" />
+        <br />
+        <label for="pointInputId"> Set your Mark (1-100) </label>
+        <input
+          id="pointInputId"
+          value="25"
+          min="1"
+          max="100"
+          oninput="pointOutputId.value=pointInputId.value"
+          type="range"
+        />
+        <output id="pointOutputId"> 25 </output>
+        <br /><br />
+
+        <fieldset>
+          <legend>Select Module</legend>
+
+          <input
+            id="module1"
+            type="checkbox"
+            name="CF"
+            value="Computer Fundamental"
+          />
+          <label for="module1">Computer Fundamental</label>
+
+          <input
+            id="module2"
+            type="checkbox"
+            name="SQL"
+            value="SQL Server Management"
+          />
+          <label for="module2">SQL Server Management</label>
+
+          <input id="module3" type="checkbox" name="C#" value="C Sharp" />
+          <label for="module3">C Sharp</label>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Select Course</legend>
+          <input id="c#" name="course" value="c#" type="radio" />
+          <label for="c#"> C Sharp </label>
+
+          <input id="jv" name="course" value="jv" type="radio" />
+          <label for="jv"> Java </label>
+
+          <input id="nt" name="course" value="ny" type="radio" />
+          <label for="nt"> Networking </label>
+        </fieldset>
+      </fieldset>
+      <br />
+      <label for="joinDate"> Join Date</label>
+      <input id="joinDate" name="joinDate" type="date" />
+      <br />
+      <label for="joinDate"> Join Date</label>
+      <input id="joinDate" name="joinDate" type="datetime-local" />
+      <br />
+      <label for="color"> Color: </label>
+      <input id="color" type="color" name="bgcolor" />
+      <br />
+      <input
+        type="text"
+        name="code"
+        pattern="[A-Za-z]{3}"
+        title="Three
+      letter code."
+      />
+    </form>
+
+    <!-- JavaScript -->
+    <script>
+      var check = function () {
+        if (
+          document.getElementById("password").value ==
+          document.getElementById("confirm-password").value
+        ) {
+          document.getElementById("passmessage").innerHTML = "";
+        } else {
+          document.getElementById("passmessage").innerHTML = "Not Matching";
+          document.getElementById("passmessage").style.color = "red";
+        }
+      };
+
+      var loadImage = function () {
+        var image = document.getElementById("output");
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
+  </body>
+</html>

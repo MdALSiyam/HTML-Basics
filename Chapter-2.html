@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+      }
+      .days {
+        background-color: lightgreen;
+      }
+      .weekend {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Headings: <h1> to <h6> Element -->
+    <h1>Md. Abdul Latif Siyam</h1>
+    <h2>Md. Abdul Latif Siyam</h2>
+    <h3>Md. Abdul Latif Siyam</h3>
+    <h4>Md. Abdul Latif Siyam</h4>
+    <h5>Md. Abdul Latif Siyam</h5>
+    <h6>Md. Abdul Latif Siyam</h6>
+
+    <!-- Paragraph: <p> Element -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
+      voluptatem dolorem dolor excepturi nulla eaque, dolorum laboriosam
+      suscipit delectus at? Odit, velit accusantium! Nulla sed excepturi
+      consectetur facere deserunt corporis vel sapiente voluptates eaque nam
+      earum provident quaerat nostrum, corrupti exercitationem porro ad odio
+      quam dolorum iste omnis. Doloremque qui nostrum eius perspiciatis quae,
+      quasi corporis earum ex veritatis sed repellendus repudiandae, soluta
+      magni quas corrupti officiis delectus maiores porro odit, sapiente
+      deserunt adipisci assumenda? Sequi magni, est minima vel, rem provident,
+      velit beatae maxime recusandae assumenda sed id iusto! Tempore officiis
+      nemo vel numquam, blanditiis sint obcaecati labore ipsa?
+    </p>
+
+    <!-- Hyperlinks: <a> Element - External Link -->
+    <h1>Home Page</h1>
+    <a href="Chapter-3.html" target="_blank">Chapter-3</a>
+
+    <!-- Hyperlinks: <a> Element - Internal Link -->
+    <h2 id="apple">My Apple</h2>
+    <a href="#apple">Go to My Apple</a><br />
+    <img src="Images/apple.jpg" alt="This is an apple" height="100px" />
+
+    <!-- Hyperlinks: <a> Element - Download Link -->
+    <h1>Download Image</h1>
+    <a href="orange.jpg" download="orange">
+      <img src="Images/orange.jpg" alt="Image not found" height="100px" />
+    </a>
+
+    <!-- Images: <img> Element -->
+    <h1>Image</h1>
+    <img
+      src="Images/apple.jpg"
+      alt="This is an apple"
+      width="100px"
+      height="100px"
+    />
+
+    <!-- Image Maps: <map> Element & <area> Element -->
+    <h1>Image Maps</h1>
+    <img
+      src="Images/myHtml.png"
+      alt="Navigation bar"
+      usemap="#logo"
+      width="120"
+      height="80"
+    />
+    <map name="logo">
+      <area shape="rect" coords="20,20,80,60" alt="Computer" href="#orange" />
+      <area shape="circle" coords="120,40,20" alt="Coffee" href="#apple" />
+    </map>
+    <h2 id="apple">My Apple</h2>
+    <img src="Images/apple.jpg" alt="This is an apple" height="100" />
+    <h2 id="orange">My Orange</h2>
+    <img src="Images/orange.jpg" alt="This is a orange" height="100" />
+
+    <!-- Lists: Unorder List -->
+    <h1>Unorder List</h1>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <!-- Lists: Order List -->
+    <h1>Order List</h1>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+
+    <!-- Lists: Description List -->
+    <h1>Description List</h1>
+    <dl>
+      <dt>HTML</dt>
+      <dd>is the standard markup language for Web pages.</dd>
+      <dt>CSS</dt>
+      <dd>is the language we use to style an HTML document.</dd>
+      <dt>JavaScript</dt>
+      <dd>is the world's most popular programming language.</dd>
+    </dl>
+
+    <!-- Tables -->
+    <h1>Table Calendar</h1>
+    <div>
+      <table>
+        <caption>
+          October 2024
+        </caption>
+        <colgroup>
+          <col span="5" class="days" />
+          <col span="2" class="weekend" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Satuday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+          </tr>
+
+          <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+          </tr>
+
+          <tr>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+          </tr>
+
+          <tr>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td colspan="2"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Breaks -->
+    <h1>Line Breaks</h1>
+    <p>
+      I've added a line break here.<br />This sentence will be on the second
+      line.
+    </p>
+
+    <h1>Thematic Breaking</h1>
+    <hr />
+    <p>HTML is the standard markup language for web pages.</p>
+    <hr />
+    <p>CSS is the language we use to style an HTML document.</p>
+    <hr />
+    <p>JavaScript is the world's most popular programming language.</p>
+    <hr />
+
+    <!-- Progess Bars -->
+    <h1>Progress</h1>
+    <p>
+      Uploading:
+      <progress value="60" max="100"></progress>
+      60%
+    </p>
+
+    <h1>Meter</h1>
+    <p>
+      Disk usage:
+      <meter value="60" max="120"></meter>
+      60GB of 120GB
+    </p>
+
+    <!-- Computer Code -->
+    <h1>Code</h1>
+    <p>This is a piece of JavaScript code:</p>
+    <code>var x = 10;</code>
+
+    <h1>Pre</h1>
+    <pre>
+            Text in a pre element is displayed
+            in the browser’s default monospace font,
+            and it preserves both spaces
+            and line breaks
+            </pre
+    >
+
+    <!-- Iframes -->
+    <h1>Iframes</h1>
+    <p>Web Development Books</p>
+    <iframe id="my-iframe" src="https://www.amazon.com/dp/B09VFLS7TF"></iframe>
+
+    <!-- HTML Entities -->
+    <h1>HTML Entities</h1>
+
+    <p>non-breaking space: &nbsp; 2022, Neo D. Truman</p>
+    <p>less than: &lt; 2022, Neo D. Truman</p>
+    <p>greater than: &gt; 2022, Neo D. Truman</p>
+    <p>ampersand: &amp; 2022, Neo D. Truman</p>
+    <p>cent: &cent; 2022, Neo D. Truman</p>
+    <p>pound: &pound; 2022, Neo D. Truman</p>
+    <p>yen: &yen; 2022, Neo D. Truman</p>
+    <p>euro: &euro; 2022, Neo D. Truman</p>
+    <p>copyright: &copy; 2022, Neo D. Truman</p>
+    <p>registered trademark: &reg; 2022, Neo D. Truman</p>
+    <p>trademark: &trade; 2022, Neo D. Truman</p>
+    <p>leftwards arrow: &larr; 2022, Neo D. Truman</p>
+    <p>upwards arrow: &uarr; 2022, Neo D. Truman</p>
+    <p>rightwards arrow: &rarr; 2022, Neo D. Truman</p>
+    <p>downwards arrow: &darr; 2022, Neo D. Truman</p>
+  </body>
+</html>
