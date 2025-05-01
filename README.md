@@ -10,16 +10,16 @@ Explores common HTML elements such as headings, paragraphs, lists, links, images
 Covers the use of inline, internal, and external CSS to style HTML elements and enhance visual presentation.
 
 ## Chapter 4: Semantic HTML
-Introduces semantic elements like <article>, <section>, <nav>, and <footer> to improve accessibility and meaning in page structure.
+Introduces semantic elements like article, section, nav, and footer to improve accessibility and meaning in page structure.
 
 ## Chapter 5: Web Forms
-Focuses on creating interactive forms using <form>, <input>, <select>, <textarea>, and validation techniques.
+Focuses on creating interactive forms using form, input, select, textarea, and validation techniques.
 
 ## Chapter 6: HTML Multimedia
-Shows how to embed audio, video, and other multimedia elements into web pages using <audio> and <video> tags.
+Shows how to embed audio, video, and other multimedia elements into web pages using audio and video tags.
 
 ## Chapter 7: HTML Graphics
-Explores ways to draw and manipulate graphics using the <canvas> element and SVG (Scalable Vector Graphics).
+Explores ways to draw and manipulate graphics using the canvas element and SVG (Scalable Vector Graphics).
 
 ## Chapter 8: HTML Advanced
 Covers advanced topics such as iframes, meta tags, and responsive design principles with viewport settings.
